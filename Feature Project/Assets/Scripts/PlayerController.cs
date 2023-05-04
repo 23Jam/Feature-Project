@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Vector2 moveVec = playerInputAction.PlayerInput.Jump.ReadValue<Vector2>();
+        //Vector2 moveVec = playerInputAction.Jump.ReadValue<Vector2>();
         //rigidBody.AddForce(new Vector3(moveVec.x, 0, moveVec.y) * 5f, ForceMode.Force);
     }
 
@@ -40,4 +40,15 @@ public class PlayerController : MonoBehaviour
             rigidBody.AddForce(new Vector3(moveVec.x, 0, moveVec.y) * 5, ForceMode.Force);
         }
     }
+
+    /*
+    public void Sheild(InputAction.CallbackContext context)
+    {
+        Debug.Log(context);
+        if (context.performed)
+        {
+            Debug.Log("The Sheild button is pressed." + context.phase);
+        }
+    }
+    */
 }
