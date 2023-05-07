@@ -11,6 +11,7 @@ public class Shield : MonoBehaviour
         if (context.performed)
         {
             Debug.Log("The button is pressed.");
+            //Sheild.SetActive(true);
         }
         
     }
