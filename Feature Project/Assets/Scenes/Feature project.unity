@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc4a404d3fe6584ba97fa7a227adda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpawnPoint: {fileID: 0}
-  arrowPrefab: {fileID: 0}
+  arrowSpawnPoint: {fileID: 1789350376}
+  arrowPrefab: {fileID: 1836295116}
 --- !u!1001 &716108114
 PrefabInstance:
   m_ObjectHideFlags: 0

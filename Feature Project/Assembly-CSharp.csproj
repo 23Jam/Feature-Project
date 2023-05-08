@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\BowSpawner.cs" />
     <Compile Include="Assets\Scripts\Shield.cs" />
     <Compile Include="Assets\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Arrow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
