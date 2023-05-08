@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ArrowSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Rigidbody ArrowRigidBody;
 
-    // Update is called once per frame
-    void Update()
+    public Transform arrowSpawnPoint;
+    public GameObject arrowPrefab;
+
+    private void Awake()
     {
-        
+        ArrowRigidBody = GetComponent<Rigidbody>();
     }
 }

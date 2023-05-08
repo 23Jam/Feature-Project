@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("The Sheild button is pressed.");
             var sheild = Instantiate(sheildPrefab, sheildSpawnPoint.position, sheildSpawnPoint.rotation);
-            sheild.GetComponent<Rigidbody>().velocity = sheildSpawnPoint.position;
+            sheild.GetComponent<Rigidbody>().velocity = sheildSpawnPoint.up;
         }
     }
     
