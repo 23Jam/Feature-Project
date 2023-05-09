@@ -11,6 +11,16 @@ public class PlayerController : MonoBehaviour
     public Transform sheildSpawnPoint;
     public GameObject sheildPrefab;
 
+    static public bool playerMet = false;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "projectile")
+        {
+            PlayerController.playerMet = true;
+        }
+    }
+
     private void Awake()
     {
         playerInputAction = new PlayerInput();
@@ -52,7 +62,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("The Sheild button is pressed.");
             var sheild = Instantiate(sheildPrefab, sheildSpawnPoint.position, sheildSpawnPoint.rotation);
-            sheild.GetComponent<Rigidbody>().velocity = sheildSpawnPoint.up;
+            sheild.GetComponent<Rigidbody>().velocity = sheildSpawnPoint.forward;
         }
     }
     
