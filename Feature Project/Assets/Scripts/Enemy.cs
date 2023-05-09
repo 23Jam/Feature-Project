@@ -12,9 +12,9 @@ public class Enemy : MonoBehaviour
     public void Arrow()
     {
         //Debug.Log(context);
-        {
+        //{
             var arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowSpawnPoint.rotation);
             arrow.GetComponent<Rigidbody>().velocity = arrowSpawnPoint.forward;
-        }
+        //}
     }
 }

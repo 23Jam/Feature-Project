@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private PlayerInput playerInputAction;
 
     public Transform sheildSpawnPoint;
-    public GameObject sheildPrefab;
+    public GameObject shieldPrefab;
 
     static public bool playerMet = false;
 
@@ -58,12 +58,19 @@ public class PlayerController : MonoBehaviour
     public void Sheild(InputAction.CallbackContext context)
     {
         Debug.Log(context);
-        //if (context.performed)
+        if (context.performed)
         {
             Debug.Log("The Sheild button is pressed.");
-            var sheild = Instantiate(sheildPrefab, sheildSpawnPoint.position, sheildSpawnPoint.rotation);
-            sheild.GetComponent<Rigidbody>().velocity = sheildSpawnPoint.forward;
+            //var sheild = Instantiate(sheildPrefab, sheildSpawnPoint.position, sheildSpawnPoint.rotation);
+            //sheild.GetComponent<Rigidbody>().velocity = sheildSpawnPoint.forward;
+            shieldPrefab.SetActive(true);
         }
+        else if(context.canceled)
+        {
+            shieldPrefab.SetActive(false);
+        }
+
+        
     }
     
 }

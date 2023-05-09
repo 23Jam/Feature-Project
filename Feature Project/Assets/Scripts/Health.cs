@@ -9,19 +9,20 @@ public class Health : MonoBehaviour
 
     private Shield shield;
     private float health;
+    //private float fillAmount;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 10f;
-        healthText.fillAmount = health;
+        //healthText.fillAmount = health;
         shield = GetComponent<Shield>();
     }
 
     void TakeDamage(float amount)
     {
         health -= amount;
-        healthText.fillAmount = health;
+        //healthText.fillAmount = health;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +31,7 @@ public class Health : MonoBehaviour
         {
             if(other.tag == "Arrow")
             {
-                TakeDamage("1f");
+                TakeDamage(1f);
             }
             
         }
