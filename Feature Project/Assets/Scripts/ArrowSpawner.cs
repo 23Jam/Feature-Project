@@ -17,14 +17,18 @@ public class ArrowSpawner : MonoBehaviour
     //[SerializeField]
     private float arrowInterval = 15.0f;
 
-    public float arrowPosMin;
+    //public float arrowPosMin;
 
-    public float arrowPosMax;
+    //public float arrowPosMax;
 
     public float arrowSpeed;
 
     public GameObject arrow;
     public Transform arrowPos;
+
+    private GameObject player;
+    private Rigidbody rb;
+    public float force;
 
     private float timer;
 
@@ -36,15 +40,17 @@ public class ArrowSpawner : MonoBehaviour
     void Start()
     {
         //StartCoroutine(spawnArrow(arrowInterval, arrowPrefab));
+        //rb = GetComponent<Rigidbody>();
     }
     
+    /*
     private IEnumerator spawnArrow(float interval, GameObject player)
     {
         yield return new WaitForSeconds(interval);
         GameObject newArrow = Instantiate(player, new Vector3(Random.Range(arrowPosMin, arrowPosMax), Random.Range(arrowPosMin, arrowPosMax)), Quaternion.identity);
         StartCoroutine(spawnArrow(interval, player));
     }
-    
+    */
 
     void Update()
     {
@@ -61,10 +67,12 @@ public class ArrowSpawner : MonoBehaviour
         */
     }
 
+    /*
     void shoot()
     {
         Instantiate(arrow, arrowPos.position, arrowPos.rotation);
     }
+    */
 
     public void Arrow()
     {
@@ -74,7 +82,9 @@ public class ArrowSpawner : MonoBehaviour
         //arrowTime = timer;
         
         var arrow = Instantiate(arrowPrefab, arrowSpawnPoints[0].position, arrowSpawnPoints[0].rotation);
+        //var arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowSpawnPoint.rotation);
         arrow.GetComponent<Rigidbody>().velocity = arrowSpawnPoints[0].forward * arrowSpeed;
+        //arrow.GetComponent<Rigidbody>().velocity = arrowSpawnPoint.forward * arrowSpeed;
         //arrow.AddForce(arrow.transform.forward * arrowSpeed);
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class enemyShooting : MonoBehaviour
 {
-    //public GameObject arrow;
-    //public Transform arrowPos;
+    public GameObject arrow;
+    public Transform arrowPos;
 
     //private float timer;
 
     private GameObject player;
     private Rigidbody rb;
-    public float speed;
+    public float force;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class enemyShooting : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         Vector3 direction = player.transform.position - transform.position;
-        rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * speed;
+        rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * force;
     }
 
     // Update is called once per frame
@@ -37,10 +37,10 @@ public class enemyShooting : MonoBehaviour
         */
     }
 
-    /*
+    
     void shoot()
     {
         Instantiate(arrow, arrowPos.position, Quaternion.identity);
     }
-    */
+    
 }
