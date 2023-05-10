@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
+    
+    public float health = 10;
     /*
-    public float health = 1;
-
     void Awake()
     {
         Destroy(gameObject, health - 1);
@@ -24,11 +24,11 @@ public class Arrow : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, health - 1);
         }
         else if (other.gameObject.tag == "Shield")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, health - 1);
         }
     }
 

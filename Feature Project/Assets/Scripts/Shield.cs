@@ -45,4 +45,12 @@ public class Shield : MonoBehaviour
             activeShield = value;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Arrow")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

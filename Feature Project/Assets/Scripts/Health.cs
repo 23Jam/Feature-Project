@@ -5,26 +5,33 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public Image healthText;
-
+    //public Image healthText;
+    
     private Shield shield;
-    private float health;
+    public GameObject gameOver;
+    public float health;
+    public Text text;
 
-    public GameObject shieldPrefab;
+    //public GameObject shieldPrefab;
     //private float fillAmount;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 10f;
-        healthText.fillAmount = health;
+        //healthText.fillAmount = health;
+        gameOver.SetActive(false);
         shield = GetComponent<Shield>();
     }
 
+    void Update()
+    {
+        text.text = "Health :" +health;    
+    }
     void TakeDamage(float amount)
     {
         health -= amount;
-        healthText.fillAmount = health;
+        //healthText.fillAmount = health;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,7 +45,9 @@ public class Health : MonoBehaviour
 
             if(health <= 0)
             {
-                shieldPrefab.SetActive(false);
+                //shieldPrefab.SetActive(false);
+                Time.timeScale = 0;
+                gameOver.SetActive(true);
             }
             
         }
