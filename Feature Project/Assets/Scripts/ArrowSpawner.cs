@@ -87,4 +87,10 @@ public class ArrowSpawner : MonoBehaviour
         //arrow.GetComponent<Rigidbody>().velocity = arrowSpawnPoint.forward * arrowSpeed;
         //arrow.AddForce(arrow.transform.forward * arrowSpeed);
     }
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+    }
+    */
 }

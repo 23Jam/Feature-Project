@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
+    /*
     public float health = 1;
 
     void Awake()
@@ -11,10 +12,24 @@ public class Arrow : MonoBehaviour
         Destroy(gameObject, health - 1);
     }
 
+    
     void OnCollusionEnter(Collision collision)
     {
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
+        //Destroy(collision.gameObject);
+        //Destroy(gameObject);
+    }
+    */
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.tag == "Shield")
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

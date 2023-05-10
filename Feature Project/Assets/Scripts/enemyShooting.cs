@@ -7,7 +7,7 @@ public class enemyShooting : MonoBehaviour
     public GameObject arrow;
     public Transform arrowPos;
 
-    //private float timer;
+    private float timer;
 
     private GameObject player;
     private Rigidbody rb;
@@ -26,7 +26,7 @@ public class enemyShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        
         timer += Time.deltaTime;
 
         if(timer > 2)
@@ -34,7 +34,7 @@ public class enemyShooting : MonoBehaviour
             timer = 0;
             shoot();
         }
-        */
+        
     }
 
     
