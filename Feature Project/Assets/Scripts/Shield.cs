@@ -9,8 +9,11 @@ public class Shield : MonoBehaviour
 
     private bool activeShield;
 
+    public float health;
+
     void Start()
     {
+        health = 10f;
         activeShield = false;
         shield.SetActive(false);
     }
@@ -50,7 +53,8 @@ public class Shield : MonoBehaviour
     {
         if(other.gameObject.tag == "Arrow")
         {
-            Destroy(gameObject);
+            //TakeDamage(1f);
+            Destroy(gameObject, health - 1);
         }
     }
 }

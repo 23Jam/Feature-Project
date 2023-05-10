@@ -68,6 +68,8 @@
     <Compile Include="Assets\Scripts\Shield.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\CollectingArrows.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -26,10 +26,10 @@ public class Arrow : MonoBehaviour
         {
             Destroy(gameObject, health - 1);
         }
-        else if (other.gameObject.tag == "Shield")
-        {
-            Destroy(gameObject, health - 1);
-        }
+        //else if (other.gameObject.tag == "Shield")
+        //{
+            //Destroy(gameObject, health - 1);
+        //}
     }
 
 }

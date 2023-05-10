@@ -8,11 +8,12 @@ public class Health : MonoBehaviour
     //public Image healthText;
     
     private Shield shield;
-    public GameObject gameOver;
+
+    //public GameObject gameOver;
     public float health;
     public Text text;
 
-    //public GameObject shieldPrefab;
+    public GameObject shieldPrefab;
     //private float fillAmount;
 
     // Start is called before the first frame update
@@ -20,7 +21,7 @@ public class Health : MonoBehaviour
     {
         health = 10f;
         //healthText.fillAmount = health;
-        gameOver.SetActive(false);
+        //gameOver.SetActive(false);
         shield = GetComponent<Shield>();
     }
 
@@ -33,10 +34,10 @@ public class Health : MonoBehaviour
         health -= amount;
         //healthText.fillAmount = health;
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
-        if (!shield.ActiveShield)
+        if (!sheild.ActiveShield)
         {
             if(other.tag == "Arrow")
             {
@@ -45,11 +46,12 @@ public class Health : MonoBehaviour
 
             if(health <= 0)
             {
-                //shieldPrefab.SetActive(false);
+                shieldPrefab.SetActive(false);
                 Time.timeScale = 0;
-                gameOver.SetActive(true);
+                //gameOver.SetActive(true);
             }
             
         }
     }
+    */
 }

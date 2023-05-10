@@ -338,6 +338,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7829280612699744532, guid: 6f89bdb304547b84db599a30b72cbf2e, type: 3}
   m_PrefabInstance: {fileID: 1583684630}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &71354081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71354074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5341a61a2d272ea45aaa1f4f9d329ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrows: 0
 --- !u!1001 &503515555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -505,6 +518,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4155587096477802764, guid: 6f89bdb304547b84db599a30b72cbf2e, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7829280612699744532, guid: 6f89bdb304547b84db599a30b72cbf2e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -666,6 +683,8 @@ GameObject:
   - component: {fileID: 809024399}
   - component: {fileID: 809024401}
   - component: {fileID: 809024400}
+  - component: {fileID: 809024402}
+  - component: {fileID: 809024403}
   m_Layer: 5
   m_Name: 'Shield points: UI'
   m_TagString: Untagged
@@ -734,6 +753,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809024398}
   m_CullTransparentMesh: 1
+--- !u!114 &809024402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809024398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7250a8814e889a5478c1f613c03ea87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  text: {fileID: 809024400}
+  shieldPrefab: {fileID: 1938321566}
+--- !u!114 &809024403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809024398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5341a61a2d272ea45aaa1f4f9d329ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrows: 10
 --- !u!1 &1006128994
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,9 +939,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7250a8814e889a5478c1f613c03ea87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 0}
   health: 10
   text: {fileID: 1082498892}
+  shieldPrefab: {fileID: 71354074}
 --- !u!1 &1086247665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,9 +1287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7250a8814e889a5478c1f613c03ea87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 0}
   health: 0
   text: {fileID: 1082498892}
+  shieldPrefab: {fileID: 0}
 --- !u!1001 &1583684630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1484,6 +1531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: {fileID: 7829280612699744533, guid: 6f89bdb304547b84db599a30b72cbf2e, type: 3}
+  health: 0
 --- !u!1 &1764426212 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4258243962914775298, guid: b56a3ba7677040e4c9819e3beaccffab, type: 3}
@@ -1720,6 +1768,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc720508d26d1cf46806130fa9faf674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1938321566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7829280612699744533, guid: 6f89bdb304547b84db599a30b72cbf2e, type: 3}
+  m_PrefabInstance: {fileID: 716108114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1938321574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938321566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7250a8814e889a5478c1f613c03ea87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  text: {fileID: 1082498892}
+  shieldPrefab: {fileID: 0}
 --- !u!1 &1947313873
 GameObject:
   m_ObjectHideFlags: 0
