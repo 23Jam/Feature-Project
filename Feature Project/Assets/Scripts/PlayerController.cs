@@ -13,6 +13,19 @@ public class PlayerController : MonoBehaviour
 
     static public bool playerMet = false;
 
+    public GameObject player;
+
+    private bool activePlayer;
+
+    public float health;
+
+    void Start()
+    {
+        health = 10f;
+        activePlayer = false;
+        //player.SetActive(false)
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "projectile")
@@ -20,6 +33,7 @@ public class PlayerController : MonoBehaviour
             PlayerController.playerMet = true;
         }
     }
+
 
     private void Awake()
     {

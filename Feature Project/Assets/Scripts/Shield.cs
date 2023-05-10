@@ -55,6 +55,8 @@ public class Shield : MonoBehaviour
         {
             //TakeDamage(1f);
             Destroy(gameObject, health - 1);
+            health -= 1;
         }
     }
+
 }
